@@ -1,0 +1,71 @@
+```<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/navbar.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/chap1.css">
+    <link rel="stylesheet" href="../style/dropdown.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <div>
+        <nav class="nav_bar">
+            <a href="./home.html" class="logo">
+                <img src="../images/logo.png" width="120px" alt="">
+            </a>
+            <ul class="nav_link">
+                <li><a href="./home.html">ACCUEIL</a></li>
+                <li><a href="./Introduction.html">INTRODUCTION</a></li>
+                <div class="drop_down">
+                    <li><a href="./Chap1.html" style="color: darkblue;" class="link_ch1">CHAPITRE 1</a></li>
+                    <div class="drop_list">
+                        <select id="mySelect" onchange="displayData()">
+                            <option value="">Sélectionnez une option</option>
+                            <option value="option1">I. Définition de l'HACCP</option>
+                            <option value="option2">II. Historique de la méthode HACCP</option>
+                            <option value="option3">III. Les objectifs de l'HACCP</option>
+                            <option value="option4">IV. Les normes HACCP</option>
+                            <option value="option5">V. Les 7 principes de la méthode H.A. C.C.P</option>
+                            <option value="option6">VI. Les 12 étapes mise en place de la démarche HACCP</option>
+                            <option value="option7">VII. Les dangers de HACCP</option>
+                            <option value="option8">VIII. Les différents types des dangers microbiologiques</option>
+                          </select>
+                          
+                        
+                          
+                    </div>
+                </div>
+                <li><a href="./Chap2.html">CHAPITRE 2</a></li>
+                <li><a href="./ChapEtud.html">CHAMP D’ETUDE</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div>
+            <div style="border: solid; width: 30vw; padding: 30px; margin-left: auto; margin-right: auto; margin-top: 35vh; text-align: center; border-radius: 25px;">
+                <h1>CHAPITRE 1:</h1>
+                <h1>  <div id="selectedData"></div></h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        function displayData() {
+  var select = document.getElementById("mySelect");
+  var selectedOption = select.options[select.selectedIndex].text;
+  var selectedDataElement = document.getElementById("selectedData");
+  selectedDataElement.textContent = "Données sélectionnées : " + selectedOption;
+}
+
+    </script>
+</body>
+</html>
+
+```
